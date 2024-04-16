@@ -1,0 +1,143 @@
+Ans1)
+Infinite loop 
+Ans2)
+. Hello
+. Hello
+. Hello
+.
+Ans3)
+. In for loop 
+. In for loop
+. In for loop
+.
+Ans4)
+. 9  1
+. 8  2
+. 7  3
+. 6  4
+. 5  5
+. 4  6
+
+Ans5)
+#include<iostream>
+using namespace std;
+int main(){
+int n,digit=0,even_sum=0;
+cout<<"Enter a number : ";
+cin>>n;
+int i = 0;
+while (n>0)
+{
+    digit = n%10;
+    if (digit%2==0)
+    {
+        even_sum+=digit;
+
+        
+    }
+    n/=10;
+    i++;
+}
+cout<<"The sum of even digits of a number is : "<<even_sum;
+
+
+
+
+
+
+
+    return 0;
+}
+Ans6)
+#include<iostream>
+using namespace std;
+int main(){
+int n,r=0,d=0,m=0;
+cout<<"Enter a number : ";
+cin>>n;
+int i=0;
+m =n;
+while (n>0)
+{
+    r*=10;
+    d=n%10;
+    r+=d;
+    n/=10;
+    i++;
+}
+cout<<"The sum of the number and its reverse is : "<<r+m;
+
+
+
+
+
+
+    return 0;
+}
+Ans7)
+#include<iostream>
+using namespace std;
+int main(){
+int n,k=1,factorial=0;
+cout<<"Enter a number : ";
+cin>>n;
+for (int i = 1; i<=n; i++)
+{
+   factorial=k*i;
+   cout<<"The factorial of "<<i<<" is : "<<factorial<<endl;
+   k = factorial;
+    
+    
+    
+}
+return 0;
+}
+
+Ans8)
+#include<iostream>
+using namespace std;
+int main(){
+int a = 1,b = 1,n,sum=0;
+cout<<"Enter a number : ";
+cin>>n;
+if(n==1) cout<<1;
+if (n!=1)cout<<a<<" "<<b;
+for (int i = 3; i <=n; i++)
+{
+    sum = a+b;
+    a = b;
+    b = sum;
+   cout<<" "<<sum;
+}
+return 0;
+}
+Ans9)
+#include<iostream>
+using namespace std;
+int main(){
+int d=0,k=0,sum=0,n=0;
+for (int i = 1; i <=500; i++)
+{
+    n=i;
+    sum=0;
+    for (int m=i; m>0; m/=10)
+    {
+        d = m%10;
+        k = d*d*d;
+        sum+=k;
+    }
+    if (sum==n)
+    {
+        cout<<sum<<endl;
+    }
+    
+}
+
+
+
+
+
+
+    return 0;
+}
+
